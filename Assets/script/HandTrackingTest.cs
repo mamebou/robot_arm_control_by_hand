@@ -35,8 +35,9 @@ public class HandTrackingTest : MonoBehaviour
             indexTip.transform.position = pose.Position; //座標を設定
             indexTip.transform.rotation = pose.Rotation; //回転を設定 default pose.rotation
             if(controller.isError){
-
+                navigater.SetActive(true);
             }else{
+                navigater.SetActive(false);
                 navigater.transform.position = pose.Position;
                 navigater.transform.rotation = pose.Rotation;
             }
